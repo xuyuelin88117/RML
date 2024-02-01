@@ -186,7 +186,10 @@ def main():
         ])
 
     logger.info(args)  # 记录命令行参数
-
+    # 分别打印每个命令行参数及其值
+    for arg, value in vars(args).items():
+        logger.info(f'{arg}: {value}')
+        
     # 设置随机种子以保证可重复性
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
