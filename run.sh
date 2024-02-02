@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #SBATCH --job-name=RML-sh
-#SBATCH --partition=gpu  # 或者您可以选择其他可用的 GPU 分区
-#SBATCH --gres=gpu:4  # 请求GPU个数
-#SBATCH --time=6:00:00  # 或者您需要的时间
+#SBATCH --partition=a100  # 或者您可以选择其他可用的 GPU 分区
+#SBATCH --gres=gpu:2  # 请求GPU个数
+#SBATCH --time=24:00:00  # 或者您需要的时间
 #SBATCH --output=job-%j.out
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=<yuelin.xu@cispa.de>
