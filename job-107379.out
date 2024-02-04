@@ -1,9 +1,0 @@
-pyxis: importing docker image: pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
-python: can't open file 'train_cifar.py': [Errno 2] No such file or directory
-python: can't open file 'train_cifar.py': [Errno 2] No such file or directory
-python: can't open file 'train_cifar.py': [Errno 2] No such file or directory
-python: can't open file 'train_cifar.py': [Errno 2] No such file or directory
-python: can't open file 'train_cifar.py': [Errno 2] No such file or directory
-python: can't open file 'train_cifar.py': [Errno 2] No such file or directory
-python: can't open file 'train_cifar.py': [Errno 2] No such file or directory
-python: can't open file 'train_cifar.py': [Errno 2] No such file or directory
