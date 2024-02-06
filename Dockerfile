@@ -13,7 +13,6 @@ RUN pip install scikit-learn
 # 安装版本控制工具
 RUN apt-get update && apt-get install -y git
 
-RUN apt-get update && apt-get upgrade
 # 设置工作目录
 WORKDIR /workspace
 
