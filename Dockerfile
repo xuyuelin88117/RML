@@ -1,8 +1,6 @@
 # 基础镜像
 FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 
-RUN apt-get update && apt-get upgrade
-
 # 安装数据处理和分析库
 RUN pip install numpy pandas matplotlib seaborn
 
