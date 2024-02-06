@@ -1,6 +1,8 @@
 # 基础镜像
 FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 
+RUN apt-get update && apt-get upgrade
+
 # 安装数据处理和分析库
 RUN pip install numpy pandas matplotlib seaborn
 
@@ -13,6 +15,7 @@ RUN pip install scikit-learn
 # 安装版本控制工具
 RUN apt-get update && apt-get install -y git
 
+RUN apt-get update && apt-get upgrade
 # 设置工作目录
 WORKDIR /workspace
 
