@@ -138,7 +138,7 @@ def get_args():  # 定义一个名为get_args的函数，用于获取命令行�
     parser.add_argument('--model', default='PreActResNet18')  # 指定模型类型，默认为'PreActResNet18'
     parser.add_argument('--l2', default=0, type=float)  # L2正则化系数，默认为0
     parser.add_argument('--l1', default=0, type=float)  # L1正则化系数，默认为0
-    parser.add_argument('--batch-size', default=128, type=int)  # 批处理大小，默认为128
+    parser.add_argument('--batch-size', default=64, type=int)  # 批处理大小，默认为128
     parser.add_argument('--data-dir', default='../cifar-data', type=str)  # 数据目录，默认为'../cifar-data'
     parser.add_argument('--epochs', default=200, type=int)  # 训练周期数，默认为200
     parser.add_argument('--lr-schedule', default='piecewise', choices=['superconverge', 'piecewise', 'linear', 'piecewisesmoothed', 'piecewisezoom', 'onedrop', 'multipledecay', 'cosine'])  # 学习率调度策略，默认为'piecewise'
