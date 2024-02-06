@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "train_cifar.py", line 503, in <module>
+    main()
+  File "train_cifar.py", line 175, in main
+    os.makedirs(args.fname)
+  File "/opt/conda/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'cifar_model'
