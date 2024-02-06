@@ -32,3 +32,4 @@
 [2024/02/06 23:25:41] - Epoch 	 Train Time 	 Test Time 	 LR 	 	 Train Loss 	 Train Acc 	 Train Robust Loss 	 Train Robust Acc 	 Test Loss 	 Test Acc 	 Test Robust Loss 	 Test Robust Acc
 Files already downloaded and verified
 Files already downloaded and verified
+[2024/02/06 23:36:57] - 0 	 337.8 	 	 338.2 	 	 0.1000 	 1.8560 	 0.3189 	 2.0731 	 	 0.2233 	 	 1.6418 	 0.3905 	 1.9624 	 	 0.2657
