@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 创建存储输出文件的目录
+mkdir -p res
+
 # 在后台运行训练命令，并将输出重定向到不同的文件
 python train_cifar.py > res/pgd.txt 2>&1 &
 python train_cifar.py --attack fgsm > res/fgsm.txt 2>&1 &
