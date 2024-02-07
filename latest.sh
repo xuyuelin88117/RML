@@ -7,8 +7,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=<yuelin.xu@cispa.de>
 #SBATCH --time=166:00:00
-#SBATCH --container-image pytorch/pytorch:latest
-
+#SBATCH --container-image pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
 python ~/CISPA-home/RML/train_cifar.py --lr-schedule piecewisezoom > ~/CISPA-home/RML/latest_res/pgd_piecewisezoom.txt 2>&1
 python ~/CISPA-home/RML/train_cifar.py --lr-schedule piecewisesmoothed > ~/CISPA-home/RML/latest_res/pgd_piecewisesmoothed.txt 2>&1
 python ~/CISPA-home/RML/train_cifar.py --lr-schedule multipledecay > ~/CISPA-home/RML/latest_res/pgd_multipledecay.txt 2>&1
