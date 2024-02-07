@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=lastTime
 #SBATCH --partition=gpu  # 或者您可以选择其他可用的 GPU 分区
-#SBATCH --gres=gpu:8  # 请求GPU个数
+#SBATCH --gres=gpu:4  # 请求GPU个数
 #SBATCH --output=last.out
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=<yuelin.xu@cispa.de>
