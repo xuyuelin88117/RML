@@ -1,33 +1,0 @@
-[2024/02/07 03:22:08] - Namespace(attack='pgd', attack_iters=10, batch_size=128, chkpt_iters=10, cutout=False, cutout_len=None, data_dir='../cifar-data', epochs=200, epsilon=8, eval=False, fgsm_alpha=1.25, fgsm_init='random', fname='cifar_model', half=False, l1=0, l2=0, lr_drop_epoch=100, lr_max=0.1, lr_one_drop=0.01, lr_schedule='piecewisezoom', mixup=False, mixup_alpha=None, model='PreActResNet18', norm='l_inf', pgd_alpha=2, restarts=1, resume=0, seed=0, val=False, width_factor=10)
-[2024/02/07 03:22:08] - model: PreActResNet18
-[2024/02/07 03:22:08] - l2: 0
-[2024/02/07 03:22:08] - l1: 0
-[2024/02/07 03:22:08] - batch_size: 128
-[2024/02/07 03:22:08] - data_dir: ../cifar-data
-[2024/02/07 03:22:08] - epochs: 200
-[2024/02/07 03:22:08] - lr_schedule: piecewisezoom
-[2024/02/07 03:22:08] - lr_max: 0.1
-[2024/02/07 03:22:08] - lr_one_drop: 0.01
-[2024/02/07 03:22:08] - lr_drop_epoch: 100
-[2024/02/07 03:22:08] - attack: pgd
-[2024/02/07 03:22:08] - epsilon: 8
-[2024/02/07 03:22:08] - attack_iters: 10
-[2024/02/07 03:22:08] - restarts: 1
-[2024/02/07 03:22:08] - pgd_alpha: 2
-[2024/02/07 03:22:08] - fgsm_alpha: 1.25
-[2024/02/07 03:22:08] - norm: l_inf
-[2024/02/07 03:22:08] - fgsm_init: random
-[2024/02/07 03:22:08] - fname: cifar_model
-[2024/02/07 03:22:08] - seed: 0
-[2024/02/07 03:22:08] - half: False
-[2024/02/07 03:22:08] - width_factor: 10
-[2024/02/07 03:22:08] - resume: 0
-[2024/02/07 03:22:08] - cutout: False
-[2024/02/07 03:22:08] - cutout_len: None
-[2024/02/07 03:22:08] - mixup: False
-[2024/02/07 03:22:08] - mixup_alpha: None
-[2024/02/07 03:22:08] - eval: False
-[2024/02/07 03:22:08] - val: False
-[2024/02/07 03:22:08] - chkpt_iters: 10
-Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ../cifar-data/cifar-10-python.tar.gz
-  0%|          | 0/170498071 [00:00<?, ?it/s]  0%|          | 8192/170498071 [00:00<40:51, 69549.48it/s]  0%|          | 38912/170498071 [00:19<40:50, 69549.48it/s]

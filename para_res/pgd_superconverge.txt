@@ -1,33 +1,0 @@
-[2024/02/07 03:22:07] - Namespace(attack='pgd', attack_iters=10, batch_size=128, chkpt_iters=10, cutout=False, cutout_len=None, data_dir='../cifar-data', epochs=200, epsilon=8, eval=False, fgsm_alpha=1.25, fgsm_init='random', fname='cifar_model', half=False, l1=0, l2=0, lr_drop_epoch=100, lr_max=0.1, lr_one_drop=0.01, lr_schedule='superconverge', mixup=False, mixup_alpha=None, model='PreActResNet18', norm='l_inf', pgd_alpha=2, restarts=1, resume=0, seed=0, val=False, width_factor=10)
-[2024/02/07 03:22:07] - model: PreActResNet18
-[2024/02/07 03:22:07] - l2: 0
-[2024/02/07 03:22:07] - l1: 0
-[2024/02/07 03:22:07] - batch_size: 128
-[2024/02/07 03:22:07] - data_dir: ../cifar-data
-[2024/02/07 03:22:07] - epochs: 200
-[2024/02/07 03:22:07] - lr_schedule: superconverge
-[2024/02/07 03:22:07] - lr_max: 0.1
-[2024/02/07 03:22:07] - lr_one_drop: 0.01
-[2024/02/07 03:22:07] - lr_drop_epoch: 100
-[2024/02/07 03:22:07] - attack: pgd
-[2024/02/07 03:22:07] - epsilon: 8
-[2024/02/07 03:22:07] - attack_iters: 10
-[2024/02/07 03:22:07] - restarts: 1
-[2024/02/07 03:22:07] - pgd_alpha: 2
-[2024/02/07 03:22:07] - fgsm_alpha: 1.25
-[2024/02/07 03:22:07] - norm: l_inf
-[2024/02/07 03:22:07] - fgsm_init: random
-[2024/02/07 03:22:07] - fname: cifar_model
-[2024/02/07 03:22:07] - seed: 0
-[2024/02/07 03:22:07] - half: False
-[2024/02/07 03:22:07] - width_factor: 10
-[2024/02/07 03:22:07] - resume: 0
-[2024/02/07 03:22:07] - cutout: False
-[2024/02/07 03:22:07] - cutout_len: None
-[2024/02/07 03:22:07] - mixup: False
-[2024/02/07 03:22:07] - mixup_alpha: None
-[2024/02/07 03:22:07] - eval: False
-[2024/02/07 03:22:07] - val: False
-[2024/02/07 03:22:07] - chkpt_iters: 10
-Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ../cifar-data/cifar-10-python.tar.gz
-  0%|          | 0/170498071 [00:00<?, ?it/s]  0%|          | 8192/170498071 [00:00<40:41, 69832.89it/s]  0%|          | 39936/170498071 [00:00<15:18, 185579.30it/s]  0%|          | 96256/170498071 [00:00<08:58, 316230.91it/s]  0%|          | 208896/170498071 [00:00<05:01, 564044.69it/s]  0%|          | 440320/170498071 [00:00<02:40, 1059021.51it/s]  1%|          | 904192/170498071 [00:00<01:24, 2017025.34it/s]  1%|          | 1824768/170498071 [00:00<00:43, 3870673.70it/s]  2%|▏         | 3655680/170498071 [00:19<00:43, 3870673.70it/s]
