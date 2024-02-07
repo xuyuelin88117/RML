@@ -9,32 +9,29 @@
 #SBATCH --time=166:00:00
 #SBATCH --container-image pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule linear > ~/CISPA-home/RML/results/fgsm_linear.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule superconverge > ~/CISPA-home/RML/results/fgsm_superconverge.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule piecewisesmoothed > ~/CISPA-home/RML/results/fgsm_piecewisesmoothed.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule piecewisezoom > ~/CISPA-home/RML/results/fgsm_piecewisezoom.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule onedrop > ~/CISPA-home/RML/results/fgsm_onedrop.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule multipledecay > ~/CISPA-home/RML/results/fgsm_multipledecay.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule cosine > ~/CISPA-home/RML/results/fgsm_cosine.txt 2>&1
 
-# 创建存储输出文件的目录
-mkdir -p results
+python ~/CISPA-home/RML/train_cifar.py --model WideResNet --attack fgsm --cutout --cutout-len 16 --mixup --mixup-alpha 1 > ~/CISPA-home/RML/results/fgsm_cutout_WideResNet.txt 2>&1
 
-# 运行您的 Python 脚本
-# 在后台运行训练命令，并将输出重定向到不同的文件
-python ~/CISPA-home/RML/train_cifar.py > res/pgd.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm > res/fgsm.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --cutout --cutout-len 16 --mixup --mixup-alpha 1 > res/pgd_cutout.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm --cutout --cutout-len 16 --mixup --mixup-alpha 1 > res/fgsm_cutout.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --model WideResNet > res/pgd_WideResNet.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --model WideResNet --attack fgsm > res/fgsm_WideResNet.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --model WideResNet --cutout --cutout-len 16 --mixup --mixup-alpha 1 > res/pgd_cutout_WideResNet.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --model WideResNet --attack fgsm --cutout --cutout-len 16 --mixup --mixup-alpha 1 > res/fgsm_cutout_WideResNet.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --lr-schedule linear > res/pgd_linear.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --lr-schedule superconverge > res/pgd_superconverge.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --lr-schedule piecewisesmoothed > res/pgd_piecewisesmoothed.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --lr-schedule piecewisezoom > res/pgd_piecewisezoom.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --lr-schedule onedrop > res/pgd_onedrop.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --lr-schedule multipledecay > res/pgd_multipledecay.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --lr-schedule cosine > res/pgd_cosine.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule linear > res/fgsm_linear.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule superconverge > res/fgsm_superconverge.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule piecewisesmoothed > res/fgsm_piecewisesmoothed.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule piecewisezoom > res/fgsm_piecewisezoom.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule onedrop > res/fgsm_onedrop.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule multipledecay > res/fgsm_multipledecay.txt 2>&1 &
-python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule cosine > res/fgsm_cosine.txt 2>&1 &
-echo "All training processes are started in background."
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule linear > ~/CISPA-home/RML/results/pgd_linear.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule superconverge > ~/CISPA-home/RML/results/pgd_superconverge.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule piecewisesmoothed > ~/CISPA-home/RML/results/pgd_piecewisesmoothed.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule piecewisezoom > ~/CISPA-home/RML/results/pgd_piecewisezoom.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule onedrop > ~/CISPA-home/RML/results/pgd_onedrop.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule multipledecay > ~/CISPA-home/RML/results/pgd_multipledecay.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule cosine > ~/CISPA-home/RML/results/pgd_cosine.txt 2>&1
+
+python ~/CISPA-home/RML/train_cifar.py
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm > ~/CISPA-home/RML/results/fgsm.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --cutout --cutout-len 16 --mixup --mixup-alpha 1 > ~/CISPA-home/RML/results/pgd_cutout.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --attack fgsm --cutout --cutout-len 16 --mixup --mixup-alpha 1 > ~/CISPA-home/RML/results/fgsm_cutout.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --model WideResNet > ~/CISPA-home/RML/results/pgd_WideResNet.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --model WideResNet --attack fgsm > ~/CISPA-home/RML/results/fgsm_WideResNet.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --model WideResNet --cutout --cutout-len 16 --mixup --mixup-alpha 1 > ~/CISPA-home/RML/results/pgd_cutout_WideResNet.txt 2>&1
+
