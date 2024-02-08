@@ -1,1 +1,2 @@
 pyxis: importing docker image: pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+slurmstepd-dgx-a100-3: error: *** JOB 123969 ON dgx-a100-3 CANCELLED AT 2024-02-07T22:13:27 ***

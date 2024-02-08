@@ -8,6 +8,8 @@
 #SBATCH --mail-user=<yuelin.xu@cispa.de>
 #SBATCH --time=166:00:00
 #SBATCH --container-image pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule superconverge > ~/CISPA-home/RML/results/pgd_superconverge.txt 2>&1
+python ~/CISPA-home/RML/train_cifar.py --lr-schedule onedrop > ~/CISPA-home/RML/results/pgd_onedrop.txt 2>&1
 
 python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule linear > ~/CISPA-home/RML/results/fgsm_linear.txt 2>&1
 python ~/CISPA-home/RML/train_cifar.py --attack fgsm --lr-schedule superconverge > ~/CISPA-home/RML/results/fgsm_superconverge.txt 2>&1
